@@ -11,5 +11,5 @@ exited_containers=$(docker ps -a | grep Exited)
 if [ -n "$exited_containers" ]; 
 then 
     echo "found exited container!"
-    python send_to_mattermost.py $webhook "$exited_containers"
+    python send_to_mattermost.py $webhook $exited_containers
 fi

@@ -18,7 +18,7 @@ def send(url, data):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Send a message to given webhook (e.g. mattermost)')
     parser.add_argument('webhook', type=str, help="webhook url to send a perlisism to")
-    parser.add_argument('--data', type=str, default="", help="send some payload")
+    parser.add_argument('data', nargs="*")
     args = parser.parse_args()
 
     webhook_url = args.webhook
