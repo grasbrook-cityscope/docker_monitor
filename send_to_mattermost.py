@@ -25,4 +25,6 @@ if __name__ == "__main__":
 
     message = "CityIO is down again :roll_eyes: \n" + args.data
 
+    print(message)
+
     send(webhook_url, message)
